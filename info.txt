@@ -1,0 +1,15 @@
+# Django project settings.py
+
+...
+
+INSTALLED_APPS = (
+    ...
+    'rest_framework_simplejwt.token_blacklist',
+    ...
+)
+
+
+Also, make sure to run python manage.py migrate to run the app’s migrations
+
+ if a user logout there access token is stored in blacklistjwt model 
+ when user want to perform any action cross check the blacklistjwt model with user id to see if access token is not in blacklistjwt
